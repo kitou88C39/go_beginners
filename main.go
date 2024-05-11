@@ -2,10 +2,9 @@ package main
 
 import "fmt"
 
-func main(){
-	fmt.Println("Welcome to our conference booking aoolication")
-	fmt.Println("Get your tickets here to attend")
-
+func main() {
 	var conferenceName = "Go Conference"
-	fmt.Println("Event Name:", conferenceName)
+
+	fmt.Println("Welcome to", conferenceName, "booking application")
+	fmt.Println("Get your tickets here to attend")
 }
