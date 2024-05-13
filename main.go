@@ -42,6 +42,8 @@ for{
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 
+	firstName := []string{}
+	for index, booking := range bookings
 	fmt.Printf("These are all our bookings: %v\n", bookings)
-}
+  }
 }
