@@ -46,7 +46,7 @@ for{
 	fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 
 	firstNames := []string{}
-	for index, booking := range bookings {
+	for  _, booking := range bookings {
 		var names = strings.Fields(booking)
 		firstNames = append(firstNames, names[0])
 	}
