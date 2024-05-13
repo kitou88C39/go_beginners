@@ -6,6 +6,7 @@ func main() {
 	conferenceName := "Go Conference"
 	const conferenceTickets int = 50
 	var remainingTickets int = 50
+	var bookings [50]string
 
 	//fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceTickets)
 
@@ -13,8 +14,6 @@ func main() {
 	fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
 	fmt.Println("Get your tickets here to attend")
 
-	var bookings [50]string
-	
 	var firstName string
 	var lastName string
 	var email string
@@ -34,7 +33,8 @@ func main() {
 	
 	remainingTickets = remainingTickets - int(userTickets)
 	bookings[0] =  firstName + " " + lastName
-	
+	fmt.Printf("The whole array: %v\n", bookings)
+
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 }
