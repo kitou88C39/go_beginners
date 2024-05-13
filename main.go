@@ -34,6 +34,10 @@ func main() {
 	remainingTickets = remainingTickets - int(userTickets)
 	bookings[0] =  firstName + " " + lastName
 	fmt.Printf("The whole array: %v\n", bookings)
+	fmt.Printf("The whole value: %v\n", bookings[0])
+	fmt.Printf("Array type: %T\n", bookings)
+	fmt.Printf("Array length: %v\n", len(bookings))
+
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
