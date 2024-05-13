@@ -52,9 +52,10 @@ for{
 	}
 	fmt.Printf("The first names of bookings are: %v\n", firstNames)
 
-	if remainingTickets == 0 {
+	var noTicketsRemaining bool = remainingTickets == 0
+	if {
 		fmt.Println("Our conference is booked out. Come back next year.")
-
+		break
 	}
   }
 }
