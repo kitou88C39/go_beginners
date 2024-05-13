@@ -47,7 +47,8 @@ for{
 
 	firstName := []string{}
 	for index, booking := range bookings{
-		strings.Fields(booking)
+		var names = strings.Fields(booking)
+		var firstName = names[0]
 	}
 	fmt.Printf("These are all our bookings: %v\n", bookings)
   }
