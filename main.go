@@ -6,7 +6,7 @@ func main() {
 	conferenceName := "Go Conference"
 	const conferenceTickets int = 50
 	var remainingTickets int = 50
-	var bookings [50]string
+	var bookings []string
 
 	//fmt.Printf("conferenceTickets is %T, remainingTickets is %T, conferenceName is %T\n", conferenceTickets, remainingTickets, conferenceTickets)
 
@@ -33,6 +33,9 @@ func main() {
 	
 	remainingTickets = remainingTickets - int(userTickets)
 	bookings[0] =  firstName + " " + lastName
+	append()
+
+
 	fmt.Printf("The whole array: %v\n", bookings)
 	fmt.Printf("The whole value: %v\n", bookings[0])
 	fmt.Printf("Array type: %T\n", bookings)
