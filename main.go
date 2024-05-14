@@ -33,7 +33,7 @@ for  {
 	fmt.Println("Enter number of tickets:")
 	fmt.Scan(&userTickets)
 
-	len(firstName) >= 2
+	len(firstName) >= 2 &&
 
 	if userTickets < uint(remainingTickets) {
 		remainingTickets = remainingTickets - int(userTickets)
