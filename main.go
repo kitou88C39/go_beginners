@@ -62,7 +62,9 @@ for  {
 	if !isValidEmail {
 		fmt.Println("email address you entered doesn't contain @ sign")
 	}
-	fmt.Println("Your input data is invalid, try again")
+	if !isValidEmail {
+		fmt.Println("number of tickets you entered is invalid")
+	}
    }
   }
 }
