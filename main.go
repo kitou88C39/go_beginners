@@ -58,11 +58,9 @@ for  {
 } else {
 	if !isValidName {
 		fmt.Println("first name or last name you entered is too short")
-	}
-	if !isValidEmail {
+	} else if !isValidEmail {
 		fmt.Println("email address you entered doesn't contain @ sign")
-	}
-	if !isValidEmail {
+	} else if !isValidTicketNumber {
 		fmt.Println("number of tickets you entered is invalid")
 	}
    }
