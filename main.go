@@ -35,8 +35,9 @@ for  {
 
 	isValidName := len(firstName) >= 2 && len(lastName) >= 2
 	isValidEmail := strings.Contains(email, "@")
+	isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
 
-	if userTickets < uint(remainingTickets) {
+	if  {
 		remainingTickets = remainingTickets - int(userTickets)
 		bookings = append(bookings, firstName + " " + lastName)
 	
