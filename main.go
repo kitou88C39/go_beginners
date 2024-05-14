@@ -56,6 +56,9 @@ for  {
 			break
 	}
 } else {
+	if !isValidName{
+		fmt.Println("first name or last name you entered is too short")
+	}
 	fmt.Println("Your input data is invalid, try again")
    }
   }
