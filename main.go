@@ -58,11 +58,18 @@ for  {
 } else {
 	if !isValidName {
 		fmt.Println("first name or last name you entered is too short")
-	} else if !isValidEmail {
+	} 
+	if !isValidEmail {
 		fmt.Println("email address you entered doesn't contain @ sign")
-	} else if !isValidTicketNumber {
+	} 
+	if !isValidTicketNumber {
 		fmt.Println("number of tickets you entered is invalid")
 	}
    }
+  }
+  city := "London"
+
+  switch city {
+	
   }
 }
