@@ -36,16 +36,11 @@ for{
 
 	if userTickets > uint(remainingTickets) {
 		fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
-		break
+		continue 
 	}
 	
 	remainingTickets = remainingTickets - int(userTickets)
 	bookings = append(bookings, firstName + " " + lastName)
-
-	// fmt.Printf("The whole slice: %v\n", bookings)
-	// fmt.Printf("The whole value: %v\n", bookings[0])
-	// fmt.Printf("Slice type: %T\n", bookings)
-	// fmt.Printf("Slice length: %v\n", len(bookings))
 
 	fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 	fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
