@@ -35,7 +35,8 @@ for{
 	fmt.Scan(&userTickets)
 
 	if userTickets > uint(remainingTickets) {
-		fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets")
+		fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
+		break
 	}
 	
 	remainingTickets = remainingTickets - int(userTickets)
