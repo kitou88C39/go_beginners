@@ -70,6 +70,11 @@ for  {
   city := "London"
 
   switch city {
-	
+  case "New York":
+  case "shingapore":
+  case "London":
+  case "Pasis":
+  case "Tokyo":
+  default:
   }
 }
