@@ -71,6 +71,6 @@ for  {
   }
 }
 
-func greetUsers(){
-	fmt.Println("Welcom to our conference")
+func greetUsers(confName string){
+	fmt.Printf("Welcom to our %v booking application\n", confName)
   }
