@@ -67,7 +67,7 @@ func main() {
 				fmt.Println("Get your tickets here to attend")
 			}
 			
-			func firstName(){
+			func printFirstNames(bookings []string){
 				 firstNames := []string{}
 				 for  _, booking := range bookings {
 				 	var names = strings.Fields(booking)
