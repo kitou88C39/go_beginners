@@ -37,10 +37,7 @@ for  {
 	isValidEmail := strings.Contains(email, "@")
 	isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
 
-	isInvalidCity := city == "Singapore" || city == "London"
-	!isValidCity
-
-	if  {
+	if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 		remainingTickets = remainingTickets - int(userTickets)
 		bookings = append(bookings, firstName + " " + lastName)
 	
@@ -58,8 +55,6 @@ for  {
 			fmt.Println("Our conference is booked out. Come back next year.")
 			break
 	}
-} else if userTickets == uint(remainingTickets) {
-
 } else {
 	fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
    }
