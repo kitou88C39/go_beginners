@@ -56,7 +56,7 @@ for  {
 			break
 	}
 } else {
-	fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
+	fmt.Println("Your input data is invalid, try again")
    }
   }
 }
