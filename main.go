@@ -67,14 +67,13 @@ for  {
 	}
    }
   }
-  city := "London"
+//   city := "London"
 
-  switch city {
-  case "New York":
-  case "shingapore":
-  case "London":
-  case "Pasis":
-  case "Tokyo":
-  default:
+//   switch city {
+//   case "New York":
+//   case "shingapore", "Tokyo":
+//   case "London", "Pasis":
+//   case "Mexico City":
+//   default:
+// 	fmt.Print("No valid city selected")
   }
-}
