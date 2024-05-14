@@ -34,7 +34,7 @@ for{
 	fmt.Println("Enter number of tickets:")
 	fmt.Scan(&userTickets)
 
-	if userTickets <= uint(remainingTickets) {
+	if userTickets < uint(remainingTickets) {
 		remainingTickets = remainingTickets - int(userTickets)
 		bookings = append(bookings, firstName + " " + lastName)
 	
@@ -52,6 +52,8 @@ for{
 			fmt.Println("Our conference is booked out. Come back next year.")
 			break
 	}
+} else if userTickets == uint(remainingTickets) {
+
 } else {
 	fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
    }
