@@ -54,7 +54,6 @@ for{
 	}
 } else {
 	fmt.Printf("We only have %v tickets remaining, so you can't book %v tickets", remainingTickets, userTickets)
-	continue
    }
   }
 }
