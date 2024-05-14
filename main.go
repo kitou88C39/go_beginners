@@ -11,7 +11,7 @@ func main() {
 	var remainingTickets int = 50
 	bookings := []string{}
 
-	greetUsers(conferenceName)
+	greetUsers(conferenceName, conferenceTickets, uint(remainingTickets))
 	
 	for  {
 		var firstName string
@@ -67,8 +67,8 @@ func main() {
 				}
 			}
 			
-			func greetUsers(confName string){
+			func greetUsers(confName string, confTickets int, remainingTickets uint){
 				fmt.Printf("Welcom to our %v booking application\n", confName)
-				fmt.Printf("We have total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets)
+				fmt.Printf("We have total of %v tickets and %v are still available.\n", confTickets, remainingTickets)
 			 	fmt.Println("Get your tickets here to attend")
 			}
