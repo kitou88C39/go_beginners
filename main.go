@@ -67,13 +67,6 @@ for  {
 	}
    }
   }
-//   city := "London"
-
-//   switch city {
-//   case "New York":
-//   case "shingapore", "Tokyo":
-//   case "London", "Pasis":
-//   case "Mexico City":
-//   default:
-// 	fmt.Print("No valid city selected")
   }
+
+  func greetUser(){}
