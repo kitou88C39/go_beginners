@@ -33,7 +33,8 @@ for  {
 	fmt.Println("Enter number of tickets:")
 	fmt.Scan(&userTickets)
 
-	len(firstName) >= 2 &&
+	isValidName := len(firstName) >= 2 && len(lastName) >= 2
+	isValidEmail := strings.Contains(email, "@")
 
 	if userTickets < uint(remainingTickets) {
 		remainingTickets = remainingTickets - int(userTickets)
