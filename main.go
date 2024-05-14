@@ -37,7 +37,8 @@ for  {
 	isValidEmail := strings.Contains(email, "@")
 	isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
 
-	isInvalidCity := city != "Singapore" || city != "London"
+	isInvalidCity := city == "Singapore" || city == "London"
+	!isValidCity
 
 	if  {
 		remainingTickets = remainingTickets - int(userTickets)
