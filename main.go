@@ -80,4 +80,5 @@ func main() {
 				isValidName := len(firstName) >= 2 && len(lastName) >= 2
 				isValidEmail := strings.Contains(email, "@")
 				isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
+				return isValidName, isValidEmail, isValidTicketNumber
 			}
