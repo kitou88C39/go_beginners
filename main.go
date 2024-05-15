@@ -31,9 +31,6 @@ func main() {
 		fmt.Println("Enter number of tickets:")
 		fmt.Scan(&userTickets)
 		
-		isValidName := len(firstName) >= 2 && len(lastName) >= 2
-		isValidEmail := strings.Contains(email, "@")
-		isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
 		
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			remainingTickets = remainingTickets - int(userTickets)
@@ -41,7 +38,7 @@ func main() {
 			
 			fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 			fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
-
+			
 			firstNames := getFirstNames(bookings)
 			fmt.Printf("The first names of bookings are: %v\n", firstNames)
 			
@@ -76,4 +73,10 @@ func main() {
 					firstNames = append(firstNames, names[0])
 				}
 				return firstNames
+			}
+
+			func validateUserInput(){
+				isValidName := len(firstName) >= 2 && len(lastName) >= 2
+				isValidEmail := strings.Contains(email, "@")
+				isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
 			}
