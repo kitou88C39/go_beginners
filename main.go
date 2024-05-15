@@ -67,7 +67,7 @@ func main() {
 				return isValidName, isValidEmail, isValidTicketNumber
 			}
 			
-			func greetUserInput(){
+			func greetUserInput() (string, string, string, uint) {
 				var firstName string
 				var lastName string
 				var email string
@@ -79,9 +79,11 @@ func main() {
 				fmt.Println("Enter your last name:")
 				fmt.Scan(&lastName)
 				
-				fmt.Println("Enter your  email address:")
+				fmt.Println("Enter your email address:")
 				fmt.Scan(&email)
 				
 				fmt.Println("Enter number of tickets:")
 				fmt.Scan(&userTickets)
+			
+				return firstName, lastName, email, userTickets
 			}
