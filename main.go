@@ -41,7 +41,8 @@ func main() {
 			
 			fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 			fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
-			
+
+			printFirstNames(bookings)
 			
 			if remainingTickets == 0 {
 				fmt.Println("Our conference is booked out. Come back next year.")
