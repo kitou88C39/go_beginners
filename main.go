@@ -69,10 +69,10 @@ func main() {
 			}
 			
 			func printFirstNames(bookings []string){
-				 firstNames := []string{}
-				 for  _, booking := range bookings {
-				 	var names = strings.Fields(booking)
-				 	firstNames = append(firstNames, names[0])
-				 }
-				 fmt.Printf("The first names of bookings are: %v\n", firstNames)
+				firstNames := []string{}
+				for  _, booking := range bookings {
+					var names = strings.Fields(booking)
+					firstNames = append(firstNames, names[0])
+				}
+				fmt.Printf("The first names of bookings are: %v\n", firstNames)
 			}
