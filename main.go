@@ -30,7 +30,8 @@ func main() {
 		
 		fmt.Println("Enter number of tickets:")
 		fmt.Scan(&userTickets)
-		
+
+		validateUserInput(firstName, lastName, email, userTicket, remainingTickets)
 		
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			remainingTickets = remainingTickets - int(userTickets)
@@ -53,8 +54,8 @@ func main() {
 					if !isValidEmail {
 						fmt.Println("email address you entered doesn't contain @ sign")
 						} 
-						if !isValidTicketNumber {
-							fmt.Println("number of tickets you entered is invalid")
+					if !isValidTicketNumber {
+						fmt.Println("number of tickets you entered is invalid")
 						}
 					}
 				}
