@@ -14,7 +14,7 @@ func main() {
 	greetUsers(conferenceName, conferenceTickets, uint(remainingTickets))
 	
 	for  {
-		
+		firstName, lastName, email, userTickets := greetUserInput()
 		firstName, lastName, email, userTickets := greetUserInput()
 		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		
@@ -83,7 +83,7 @@ func main() {
 				return firstName, lastName, email, userTickets
 			}
 			
-			func bookTicket(){
+			func bookTicket(remainingTickets uint, userTickets uint, bookings []string, firstName string, lastName string, remainingTickets, conferenceName){
 				remainingTickets = remainingTickets - int(userTickets)
 				bookings = append(bookings, firstName + " " + lastName)
 				
