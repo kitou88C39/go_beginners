@@ -6,10 +6,15 @@ import (
 )
 
 const conferenceTickets int = 50
-
-var remainingTickets uint = 50
 var conferenceName = "Go Conference"
+var remainingTickets uint = 50
 var bookings = []string{}
+
+"Nana Janashia"
+firstName: "Nana"
+lastName: "Janashia"
+email: "nn@nn.com"
+tickets: 3
 
 func main() {
 
