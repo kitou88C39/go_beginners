@@ -7,9 +7,9 @@ import (
 
 const conferenceTickets int = 50
 
-var RemainingTickets uint = 50
+var remainingTickets uint = 50
 var conferenceName = "Go Conference"
-var vabookings = []string{}
+var bookings = []string{}
 
 func main() {
 
@@ -17,14 +17,9 @@ func main() {
 	
 	for  {
 
-		// firstName, lastName, email, userTickets := greetUserInput()
-		// isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets)
-		
 		firstName, lastName, email, userTickets := greetUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets)
+		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		
-		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
-
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			
 			bookTicket(userTickets,firstName,lastName,email)
@@ -56,21 +51,15 @@ func main() {
 				fmt.Println("Get your tickets here to attend")
 			}
 			
-			func getFirstNames()[]string {
+			func printFirstNames()[]string {
 				firstNames := []string{}
+
 				for  _, booking := range bookings {
 					var names = strings.Fields(booking)
 					firstNames = append(firstNames, names[0])
 				}
 				return firstNames
 			}
-			
-			// func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
-			// 	isValidName := len(firstName) >= 2 && len(lastName) >= 2
-			// 	isValidEmail := strings.Contains(email, "@")
-			// 	isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
-			// 	return isValidName, isValidEmail, isValidTicketNumber
-			// }
 			
 			func greetUserInput() (string, string, string, uint) {
 				var firstName string
