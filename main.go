@@ -59,7 +59,7 @@ func main() {
 			func printFirstNames()[]string {
 				firstNames := []string{}
 				for  _, booking := range bookings {
-					firstNames = append(firstNames, booking["firstName"])
+					firstNames = append(firstNames, booking.firstName)
 				}
 				return firstNames
 			}
@@ -94,11 +94,6 @@ func main() {
 					email:email,
 					numberOfTickets:userTickets,
 				}
-
-				// userData["firstName"] = firstName
-				// userData["lastName"] = lastName
-				// userData["email"] = email
-				// userData["numberOfTickets"] = strconv.FormatUint(uint64(userTickets),10)
 
 				bookings = append(bookings, userData)
 				fmt.Printf("List of bookings is %v\n",bookings)
