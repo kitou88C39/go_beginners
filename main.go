@@ -1,8 +1,6 @@
-package helper
+package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 const conferenceTickets int = 50
 var conferenceName = "Go Conference"
