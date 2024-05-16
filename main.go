@@ -10,12 +10,6 @@ var conferenceName = "Go Conference"
 var remainingTickets uint = 50
 var bookings = []string{}
 
-"Nana Janashia"
-firstName: "Nana"
-lastName: "Janashia"
-email: "nn@nn.com"
-tickets: 3
-
 func main() {
 
 	greetUsers()
@@ -88,11 +82,17 @@ func main() {
 			}
 			
 			func bookTicket(userTickets uint, firstName string, lastName string, email string){
-				remainingTickets = remainingTickets - int(userTickets)
+				remainingTickets = remainingTickets - userTickets
+
+				var userData = make(map[string]string)
+				userData["firstName"] = firstName
+				userData["lastName"] = lastName
+				userData["email"] = email
+
 				bookings = append(bookings, firstName + " " + lastName)
 				
 				fmt.Printf("Thank you %v %v for booking %v tickets. You will receive a confirmation email at %v\n", firstName, lastName, userTickets, email)
 				fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 				
 			}
-		}
+		
