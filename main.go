@@ -15,7 +15,7 @@ func main() {
 	greetUsers()
 	
 	for  {
-		
+
 		firstName, lastName, email, userTickets := greetUserInput()
 		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets)
 		
@@ -59,12 +59,12 @@ func main() {
 				return firstNames
 			}
 			
-			func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
-				isValidName := len(firstName) >= 2 && len(lastName) >= 2
-				isValidEmail := strings.Contains(email, "@")
-				isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
-				return isValidName, isValidEmail, isValidTicketNumber
-			}
+			// func validateUserInput(firstName string, lastName string, email string, userTickets uint) (bool, bool, bool) {
+			// 	isValidName := len(firstName) >= 2 && len(lastName) >= 2
+			// 	isValidEmail := strings.Contains(email, "@")
+			// 	isValidTicketNumber := userTickets > 0 && userTickets <= uint(remainingTickets)
+			// 	return isValidName, isValidEmail, isValidTicketNumber
+			// }
 			
 			func greetUserInput() (string, string, string, uint) {
 				var firstName string
