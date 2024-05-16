@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 const conferenceTickets int = 50
 var conferenceName = "Go Conference"
@@ -21,11 +24,12 @@ func main() {
 	for  {
 
 		firstName, lastName, email, userTickets := greetUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
+		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			
 			bookTicket(userTickets,firstName,lastName,email)
+			sendTicket(userTickets,firstName,lastName,email)
 
 			firstNames := getFirstNames()
 			fmt.Printf("The first names of bookings are: %v\n",firstNames)
@@ -101,6 +105,7 @@ func main() {
 			}
 		
 func sendTicket(userTickets uint, firstName string, lastName string, email string){
+	time.Sleep(10 * time.Second)
 	var ticket = fmt.Sprintf("%v tickets remaining for %v %v", userTickets, firstName, lastName)
 	fmt.Println("##################")
 	fmt.Printf("Sending ticket:\n %v \nto emaik address %v\n", ticket, email)
