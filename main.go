@@ -102,5 +102,7 @@ func main() {
 		
 func sendTicket(userTickets uint, firstName string, lastName string, email string){
 	var ticket = fmt.Sprintf("%v tickets remaining for %v %v", userTickets, firstName, lastName)
-	fmt.Printf("Sending ticket %v to emaik address %v", ticket, email)
+	fmt.Println("##################")
+	fmt.Printf("Sending ticket:\n %v \nto emaik address %v\n", ticket, email)
+	fmt.Println("##################")
 }
