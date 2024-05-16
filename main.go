@@ -17,18 +17,20 @@ type UserData struct {
 	numberOfTickets uint
 }
 
+var wg = WaitGroup{}
+
 func main() {
 
 	greetUsers()
 	
-	for  {
-
 		firstName, lastName, email, userTickets := greetUserInput()
 		isValidName, isValidEmail, isValidTicketNumber := validateUserInput(firstName, lastName, email, userTickets, remainingTickets)
 		
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			
 			bookTicket(userTickets,firstName,lastName,email)
+
+			wg.Add(1)
 			go sendTicket(userTickets,firstName,lastName,email)
 
 			firstNames := printFirstNames()
@@ -36,7 +38,7 @@ func main() {
 			
 			if remainingTickets == 0 {
 				fmt.Println("Our conference is booked out. Come back next year.")
-				break
+				//break
 			}
 		} else {
 				if !isValidName {
@@ -49,8 +51,8 @@ func main() {
 					fmt.Println("number of tickets you entered is invalid")
 					}
 				}
+				wg.Wait()
 			}
-		}
 			
 			func greetUsers(){
 				fmt.Printf("Welcom to our %v booking application\n", conferenceName)
@@ -90,7 +92,7 @@ func main() {
 			func bookTicket(userTickets uint, firstName string, lastName string, email string){
 				remainingTickets = remainingTickets - userTickets
 
-				var userData = UserData{
+				var userData = UserData {
 					firstName:firstName,
 					lastName:lastName,
 					email:email,
@@ -110,4 +112,5 @@ func sendTicket(userTickets uint, firstName string, lastName string, email strin
 	fmt.Println("##################")
 	fmt.Printf("Sending ticket:\n %v \nto emaik address %v\n", ticket, email)
 	fmt.Println("##################")
+	wg.Done()
 }
