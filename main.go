@@ -31,26 +31,29 @@ func main() {
 			bookTicket(userTickets,firstName,lastName,email)
 			sendTicket(userTickets,firstName,lastName,email)
 
-			firstNames := getFirstNames()
-			fmt.Printf("The first names of bookings are: %v\n",firstNames)
+			// firstNames := getFirstNames()
+			// fmt.Printf("The first names of bookings are: %v\n",firstNames)
+			
+			firstNames := printFirstNames()
+			fmt.Printf("The first names of bookings are: %v\n", firstNames)
 			
 			if remainingTickets == 0 {
 				fmt.Println("Our conference is booked out. Come back next year.")
 				break
 			}
-			} else {
+		} else {
 				if !isValidName {
 					fmt.Println("first name or last name you entered is too short")
 					} 
-					if !isValidEmail {
-						fmt.Println("email address you entered doesn't contain @ sign")
-						} 
-						if !isValidTicketNumber {
-							fmt.Println("number of tickets you entered is invalid")
-						}
+				if !isValidEmail {
+					fmt.Println("email address you entered doesn't contain @ sign")
+					} 
+				if !isValidTicketNumber {
+					fmt.Println("number of tickets you entered is invalid")
 					}
 				}
 			}
+		}
 			
 			func greetUsers(){
 				fmt.Printf("Welcom to our %v booking application\n", conferenceName)
