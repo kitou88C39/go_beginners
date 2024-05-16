@@ -7,8 +7,8 @@ import (
 
 const conferenceTickets int = 50
 
+var RemainingTickets uint = 50
 var conferenceName = "Go Conference"
-var remainingTickets int = 50
 var vabookings = []string{}
 
 func main() {
@@ -101,4 +101,4 @@ func main() {
 				fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 				
 			}
-
+		}
