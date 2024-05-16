@@ -5,11 +5,12 @@ import (
 	"strings"
 )
 
+conferenceName := "Go Conference"
+const conferenceTickets int = 50
+var remainingTickets int = 50
+bookings := []string{}
+
 func main() {
-	conferenceName := "Go Conference"
-	const conferenceTickets int = 50
-	var remainingTickets int = 50
-	bookings := []string{}
 
 	greetUsers(conferenceName, conferenceTickets, uint(remainingTickets))
 	
