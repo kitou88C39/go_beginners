@@ -100,3 +100,6 @@ func main() {
 				fmt.Printf("%v tickets remaining for %v\n",remainingTickets, conferenceName)
 			}
 		
+func sendTicket(userTickets uint, firstName string, lastName string){
+	fmt.Printf("%v tickets remaining for %v %v", userTickets, firstName, lastName)
+}
