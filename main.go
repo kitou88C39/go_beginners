@@ -9,7 +9,7 @@ import (
 const conferenceTickets int = 50
 var conferenceName = "Go Conference"
 var remainingTickets uint = 50
-var bookings = []string{}
+var bookings = make([]map[string]string)
 
 func main() {
 
