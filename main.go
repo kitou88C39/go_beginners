@@ -17,9 +17,14 @@ func main() {
 	
 	for  {
 
-		firstName, lastName, email, userTickets := greetUserInput()
-		isValidName, isValidEmail, isValidTicketNumber := helper.validateUserInput(firstName, lastName, email, userTickets)
+		// firstName, lastName, email, userTickets := greetUserInput()
+		// isValidName, isValidEmail, isValidTicketNumber := helper.ValidateUserInput(firstName, lastName, email, userTickets)
 		
+		firstName, lastName, email, userTickets := greetUserInput()
+		isValidName, isValidEmail, isValidTicketNumber := ValidateUserInput(firstName, lastName, email, userTickets)
+		
+		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
+
 		if  isValidName &&  isValidEmail &&  isValidTicketNumber {
 			
 			bookTicket(userTickets,firstName,lastName,email)
