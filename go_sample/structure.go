@@ -12,5 +12,6 @@ func (r Rectangle) Area() float64 {
 
 func structure (){
 	r := Rectangle{width:20, height:30}
-	fmt.Println(r)
+	area := r.Area()
+	fmt.Println(area)
 }
