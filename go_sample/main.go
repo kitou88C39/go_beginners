@@ -13,4 +13,11 @@ func main(){
 	var j = 10
 
 	fmt.Println("変数", j)
+	//③ 変数名 := 値
+	k := 10
+
+	fmt.Println("変数", k)
+	//④ 変数名1, 変数名2 := 値1, 値2
+	l, m := 10, "hoge"
+	fmt.Println("変数", l, m)
 }
