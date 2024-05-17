@@ -1,7 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"crypto/rand"
+	"fmt"
+)
 
 func main(){
-	fmt.Println("Hello World")
+	//① var 変数名型
+	var i int
+	i = 10
+	fmt.Println("Hello World", rand.Intn(10))
 }
