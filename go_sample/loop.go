@@ -18,7 +18,7 @@ func loop (){
 	// }
 	// fmt.Println(sum)
 //③ 配列の宣言方法
-	// 配列の宣言
+	
 	arr := []string{"hoge","hoge","hoge"}
 	for _, num := range arr {
 		fmt.Println(num)
