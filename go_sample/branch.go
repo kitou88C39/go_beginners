@@ -4,7 +4,7 @@ import "fmt"
 
 func isEven(num int) {
 	if num % 2 == 0 {
-	fmt.Println("%d is even \n", num)
+		fmt.Printf("%d is even \n", num)
 	}
 }
 
