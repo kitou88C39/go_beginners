@@ -6,8 +6,8 @@ type Rectangle struct  {
 	width, height int
 }
 
-func (r Rectangle) Area() float64 {
-	return float64(r.width * r.height)
+func (r Rectangle) Area() int {
+	return r.width * r.height
 }
 
 func structure (){
