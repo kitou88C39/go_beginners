@@ -25,7 +25,8 @@ func getBooks(c *gin.Context){
 }
 
 func bookById(c *gin.Context){
-	
+	id := c.Param("id")
+	book := getBookById()
 }
 
 func getBookById(id string)(*book, error){
