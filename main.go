@@ -25,8 +25,11 @@ func getBooks(c *gin.Context){
 
 func creatBooks(c *gin.Context){
 	var newBook book
-	if err := c.Bind(&newBook); err != nil{}
-
+	if err := c.BindJSON(&newBook); err != nil{
+		return
+	}
+	append(books,newBook)
+	c.IndentedJSON(http.StatusCreated, newBook)
 }
 
 
