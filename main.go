@@ -23,6 +23,10 @@ func getBooks(c *gin.Context){
 	c.IndentedJSON(http.StatusOK, books)
 }
 
+func getBookById(id string)(*book, error){
+	
+}
+
 func creatBooks(c *gin.Context){
 	var newBook book
 	if err := c.BindJSON(&newBook); err != nil{
