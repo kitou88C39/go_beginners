@@ -26,7 +26,12 @@ func getBooks(c *gin.Context){
 
 func bookById(c *gin.Context){
 	id := c.Param("id")
-	book := getBookById()
+	book, err := getBookById(id)
+
+	if err != nil {
+		return
+	}
+	c.IndentedJSON(http.StatusOK, book)
 }
 
 func getBookById(id string)(*book, error){
