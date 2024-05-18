@@ -24,7 +24,11 @@ func getBooks(c *gin.Context){
 }
 
 func getBookById(id string)(*book, error){
-	
+	for i, b := range books {
+		if b.ID == id {
+			return &books[i], nil
+		}
+	}
 }
 
 func creatBooks(c *gin.Context){
