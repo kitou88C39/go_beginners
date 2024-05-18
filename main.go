@@ -1,5 +1,7 @@
 package main
 
+import "github.com/gin-gonic/gin"
+
 type book struct{
 	ID     string `json:"id"`
 	Title  string `json:"title"`
@@ -13,6 +15,10 @@ var books = []book{
 	{ID: "3", Title: "War and Peace", Author: "Leo Tolstoy", Quantity: 6 },
 }
 
-func main(){
+func getBooks(){
 	
+}
+
+func main(){
+	router := gin.Default()
 } 
