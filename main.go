@@ -56,6 +56,7 @@ func creatBooks(c *gin.Context){
 func main(){
 	router := gin.Default()
 	router.GET("/books",getBooks)
+	router.GET("/books/:id", bookById)
 	router.POST("/books", creatBooks)
 	router.Run("localhost:8080")
 } 
