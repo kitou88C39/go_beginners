@@ -28,7 +28,7 @@ func creatBooks(c *gin.Context){
 	if err := c.BindJSON(&newBook); err != nil{
 		return
 	}
-	append(books,newBook)
+	books = append(books,newBook)
 	c.IndentedJSON(http.StatusCreated, newBook)
 }
 
@@ -36,5 +36,6 @@ func creatBooks(c *gin.Context){
 func main(){
 	router := gin.Default()
 	router.GET("/books",getBooks)
+	router.POST("/books", creatBooks)
 	router.Run("localhost:8080")
 } 
