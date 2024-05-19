@@ -36,11 +36,12 @@ func bookById(c *gin.Context){
 }
 
 func checkoutBooks(c *gin.Context){
-	id, err := c.GetQuery("id")
-	if err != nil {
+	id, ok := c.GetQuery("id")
+	if ok != false {
 		c.IndentedJSON(http.StatusBadRequest, gin.H{"messeage":"Missing id query parameter."})
 		return
 	}
+	book, err := getBookById(id)
 }
 
 func getBookById(id string)(*book, error){
