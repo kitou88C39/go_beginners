@@ -36,9 +36,12 @@ func bookById(c *gin.Context){
 }
 
 func checkoutBooks(c *gin.Context){
-	c.IndentedJSON(http.StatusOK, books)
+	id, err := c.GetQuery("id")
+	if err != nil {
+		c.IndentedJSON(http.StatusBadRequest, gin.H{"messeage":"Missing id query parameter."})
+		return
+	}
 }
-
 
 func getBookById(id string)(*book, error){
 	for i, b := range books {
