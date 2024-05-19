@@ -57,6 +57,8 @@ func checkoutBooks(c *gin.Context){
 	c.IndentedJSON(http.StatusOK, book)
 }
 
+func returnBook(c *gin.Context){}
+
 func getBookById(id string)(*book, error){
 	for i, b := range books {
 		if b.ID == id {
